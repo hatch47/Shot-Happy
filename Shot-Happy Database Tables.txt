@@ -1,0 +1,91 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema shothappy
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema shothappy
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `shothappy` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `shothappy` ;
+
+-- -----------------------------------------------------
+-- Table `shothappy`.`email`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shothappy`.`email` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Email` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 13
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `shothappy`.`player`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shothappy`.`player` (
+  `Name` TEXT NULL DEFAULT NULL,
+  `Team` TEXT NULL DEFAULT NULL,
+  `Position` TEXT NULL DEFAULT NULL,
+  `GP` INT NULL DEFAULT NULL,
+  `TOI` DOUBLE NULL DEFAULT NULL,
+  `Goals` INT NULL DEFAULT NULL,
+  `SH%` DOUBLE NULL DEFAULT NULL,
+  `iSCF` INT NULL DEFAULT NULL,
+  `iHDCF` INT NULL DEFAULT NULL,
+  `Shot Attempts` INT NULL DEFAULT NULL,
+  `Shots on Goal` INT NULL DEFAULT NULL,
+  `Unblocked Shot Attempts` INT NULL DEFAULT NULL,
+  `Got Blocked Attempts` INT NULL DEFAULT NULL,
+  `Missed Net` INT NULL DEFAULT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 689
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `shothappy`.`team`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `shothappy`.`team` (
+  `Team` TEXT NULL DEFAULT NULL,
+  `GP` INT NULL DEFAULT NULL,
+  `W` INT NULL DEFAULT NULL,
+  `Point %` DOUBLE NULL DEFAULT NULL,
+  `GF` INT NULL DEFAULT NULL,
+  `GA` INT NULL DEFAULT NULL,
+  `HDCF` INT NULL DEFAULT NULL,
+  `HDCA` INT NULL DEFAULT NULL,
+  `Shot Attempts` INT NULL DEFAULT NULL,
+  `Shots on Goal` INT NULL DEFAULT NULL,
+  `Unblocked Shot Attempts` INT NULL DEFAULT NULL,
+  `Got Blocked Attempts` INT NULL DEFAULT NULL,
+  `Missed Net` INT NULL DEFAULT NULL,
+  `Shot Attempts Against` INT NULL DEFAULT NULL,
+  `Shots on Goal Against` INT NULL DEFAULT NULL,
+  `Unblocked Shot Attempts Against` INT NULL DEFAULT NULL,
+  `Got Blocked Attempts Against` INT NULL DEFAULT NULL,
+  `Missed Net Against` INT NULL DEFAULT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 33
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
